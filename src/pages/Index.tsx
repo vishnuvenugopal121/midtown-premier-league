@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTournament } from '@/context/TournamentContext';
@@ -6,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import PointsTable from '@/components/PointsTable';
 import UpcomingMatches from '@/components/UpcomingMatches';
 import CountdownTimer from '@/components/CountdownTimer';
+import MatchDayAgenda from '@/components/MatchDayAgenda';
 import { Button } from '@/components/ui/button';
 import { Trophy } from 'lucide-react';
 
@@ -26,17 +26,24 @@ const Index = () => {
             <p className="text-lg opacity-90 mb-6">The ultimate cricket tournament</p>
             
             {hasUpcomingMatch ? (
-              <div className="bg-white bg-opacity-10 rounded-lg p-4 md:p-6 backdrop-blur-sm">
-                <h2 className="text-xl font-semibold mb-3">Next Match</h2>
-                <UpcomingMatches count={1} />
-                
-                <div className="mt-6">
-                  <h3 className="text-sm font-medium mb-2 text-center">Countdown to Match</h3>
-                  <CountdownTimer 
-                    targetDateTime={upcomingMatches[0].date}
-                  />
+              <>
+                <div className="bg-white bg-opacity-10 rounded-lg p-4 md:p-6 backdrop-blur-sm mb-6">
+                  <h2 className="text-xl font-semibold mb-3">Next Match</h2>
+                  <UpcomingMatches count={1} />
+                  
+                  <div className="mt-6">
+                    <h3 className="text-sm font-medium mb-2 text-center">Countdown to Match</h3>
+                    <CountdownTimer 
+                      targetDateTime={upcomingMatches[0].date}
+                    />
+                  </div>
                 </div>
-              </div>
+
+                {/* Separate box for Match Day Agenda */}
+                <div className="bg-white bg-opacity-10 rounded-lg p-4 md:p-6 backdrop-blur-sm">
+                  <MatchDayAgenda />
+                </div>
+              </>
             ) : (
               <div className="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm text-center">
                 <Trophy size={48} className="mx-auto mb-4" />

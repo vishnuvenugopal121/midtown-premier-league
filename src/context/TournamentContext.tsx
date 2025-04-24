@@ -182,6 +182,7 @@ export const TournamentProvider = ({ children }: { children: ReactNode }) => {
     let totalOversFaced = 0;
     let totalRunsConceded = 0;
     let totalOversBowled = 0;
+    let isAllOut = false;
 
     teamMatches.forEach((match) => {
       if (!match.result) return;
@@ -208,40 +209,43 @@ export const TournamentProvider = ({ children }: { children: ReactNode }) => {
         totalOversBowled += overs;
       } else if (isWinner) {
         // For winners
-        const runsScored = parseInt(
-          match.result.winningTeamScore.split("/")[0]
-        );
-        const runsConceded = parseInt(
-          match.result.losingTeamScore.split("/")[0]
-        );
+        const runsScored = parseInt(match.result.winningTeamScore.split("/")[0]);
+        const runsConceded = parseInt(match.result.losingTeamScore.split("/")[0]);
         const oversFaced = match.result.winningTeamOversFaced;
         const oversBowled = match.result.losingTeamOversFaced;
+        const isOpponentAllOut = match.result.losingTeamScore.includes("/6"); // Check if opponent was all out
 
         totalRunsScored += runsScored;
         totalOversFaced += oversFaced;
         totalRunsConceded += runsConceded;
         totalOversBowled += oversBowled;
+        isAllOut = isOpponentAllOut;
       } else {
         // For losers
         const runsScored = parseInt(match.result.losingTeamScore.split("/")[0]);
-        const runsConceded = parseInt(
-          match.result.winningTeamScore.split("/")[0]
-        );
+        const runsConceded = parseInt(match.result.winningTeamScore.split("/")[0]);
         const oversFaced = match.result.losingTeamOversFaced;
         const oversBowled = match.result.winningTeamOversFaced;
+        const isTeamAllOut = match.result.losingTeamScore.includes("/6"); // Check if team was all out
 
         totalRunsScored += runsScored;
         totalOversFaced += oversFaced;
         totalRunsConceded += runsConceded;
         totalOversBowled += oversBowled;
+        isAllOut = isTeamAllOut;
       }
     });
 
     if (totalOversFaced === 0 || totalOversBowled === 0) return 0;
 
-    const runRateScored = totalRunsScored / totalOversFaced;
-    const runRateConceded = totalRunsConceded / totalOversBowled;
-    return parseFloat((runRateScored - runRateConceded).toFixed(3));
+    return calculateNRR(
+      totalRunsScored,
+      totalOversFaced,
+      totalRunsConceded,
+      totalOversBowled,
+      isAllOut,
+      6 // Maximum overs in the tournament
+    );
   };
 
   const updateMatch = async (updatedMatch: Match) => {
@@ -382,7 +386,7 @@ export const TournamentProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const getTeamStats = (teamId: string): TeamStats | undefined => {
-    return tournament.standings.find((stats) => stats.teamId === teamId);
+    return tournament.standings.find((stats) => stats.team_id === teamId);
   };
 
   const getUpcomingMatches = (count?: number): Match[] => {
