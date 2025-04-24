@@ -1,4 +1,3 @@
-
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -51,9 +50,20 @@ export function formatTime(date: Date | string): string {
 
 
 // Calculate Net Run Rate (simplified example)
-export function calculateNRR(runsScored: number, oversPlayed: number, runsConceded: number, oversBowled: number): number {
-  const runRateScored = runsScored / oversPlayed;
-  const runRateConceded = runsConceded / oversBowled;
+export function calculateNRR(
+  runsScored: number, 
+  oversPlayed: number, 
+  runsConceded: number, 
+  oversBowled: number,
+  isAllOut: boolean = false,
+  maxOvers: number = 6
+): number {
+  // If team is all out, use maximum overs
+  const effectiveOversPlayed = isAllOut ? maxOvers : oversPlayed;
+  const effectiveOversBowled = isAllOut ? maxOvers : oversBowled;
+
+  const runRateScored = runsScored / effectiveOversPlayed;
+  const runRateConceded = runsConceded / effectiveOversBowled;
   
   return parseFloat((runRateScored - runRateConceded).toFixed(3));
 }
