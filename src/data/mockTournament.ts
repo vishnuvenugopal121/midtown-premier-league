@@ -50,7 +50,7 @@ export const mockTournament: Tournament = {
       teamB: "GW",
       date: "2025-04-06",
       time: "19:30",
-      venue: "Wankhede Stadium",
+      venue: "Club-T Turf, Kochi",
       status: "completed",
       result: {
         winner: "HU",
@@ -67,7 +67,7 @@ export const mockTournament: Tournament = {
       teamB: "TT",
       date: "2025-04-08",
       time: "19:30",
-      venue: "Eden Gardens",
+      venue: "Club-T Turf, Kochi",
       status: "completed",
       result: {
         winner: "PH",
@@ -84,7 +84,7 @@ export const mockTournament: Tournament = {
       teamB: "PH",
       date: "2025-04-10",
       time: "19:30",
-      venue: "Wankhede Stadium",
+      venue: "Club-T The Football Turf Kochi",
       status: "completed",
       result: {
         winner: "HU",
@@ -101,7 +101,7 @@ export const mockTournament: Tournament = {
       teamB: "GW",
       date: "2025-04-12",
       time: "15:30",
-      venue: "M. A. Chidambaram Stadium",
+      venue: "Club-T Turf, Kochi",
       status: "completed",
       result: {
         winner: "TT",
@@ -118,7 +118,7 @@ export const mockTournament: Tournament = {
       teamB: "TT",
       date: "2025-04-14",
       time: "19:30",
-      venue: "Wankhede Stadium",
+      venue: "Club-T The Football Turf Kochi",
       status: "scheduled"
     },
     {
@@ -128,7 +128,7 @@ export const mockTournament: Tournament = {
       teamB: "PH",
       date: "2025-04-16",
       time: "19:30",
-      venue: "M. A. Chidambaram Stadium",
+      venue: "Club-T Turf, Kochi",
       status: "scheduled"
     },
     {
@@ -138,7 +138,7 @@ export const mockTournament: Tournament = {
       teamB: "TBD",
       date: "2025-04-20",
       time: "19:30",
-      venue: "Narendra Modi Stadium",
+      venue: "Club-T Turf, Kochi",
       status: "scheduled",
       isFinal: true
     }

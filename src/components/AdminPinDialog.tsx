@@ -17,7 +17,7 @@ interface AdminPinDialogProps {
   onSuccess: () => void;
 }
 
-const ADMIN_PIN = "2255";
+const ADMIN_PIN = "7798";
 
 export function AdminPinDialog({ isOpen, onClose, onSuccess }: AdminPinDialogProps) {
   const [pin, setPin] = useState("");
