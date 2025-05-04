@@ -339,19 +339,19 @@ export const TournamentProvider = ({ children }: { children: ReactNode }) => {
       }
   
       // Supabase update: update the tournament data
-      // const response = await supabase
-      //   .from("tournaments")
-      //   .update({
-      //     matches: updatedMatches,
-      //     standings: updatedStandings,
-      //     teams: updatedTeams, // Include the updated teams in the Supabase update
-      //   })
-      //   .eq("id", tournament.id)
-      //   .select();
+      const response = await supabase
+        .from("tournaments")
+        .update({
+          matches: updatedMatches,
+          standings: updatedStandings,
+          teams: updatedTeams, // Include the updated teams in the Supabase update
+        })
+        .eq("id", tournament.id)
+        .select();
   
-      // console.log("Supabase response:", response);
+      console.log("Supabase response:", response);
   
-      // if (response?.error) throw response.error;
+      if (response?.error) throw response.error;
   
       setTournament({
         ...tournament,
