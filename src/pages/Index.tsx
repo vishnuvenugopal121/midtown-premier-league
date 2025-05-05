@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTournament } from '@/context/TournamentContext';
 import Navbar from '@/components/Navbar';
 import PointsTable from '@/components/PointsTable';
@@ -21,6 +21,7 @@ const Index = () => {
   const upcomingMatches = getUpcomingMatches(1);
   const hasUpcomingMatch = upcomingMatches.length > 0;
   const [showConfetti, setShowConfetti] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!hasUpcomingMatch) {
@@ -141,7 +142,7 @@ const Index = () => {
                   
                   <div className="flex justify-center gap-4">
                     <Button asChild className="bg-[#DAA520] hover:bg-[#DAA520]/90">
-                      <Link to="/points-table">View Results</Link>
+                      <Link to="/points-table">View Points Table</Link>
                     </Button>
                     <Button asChild variant="outline" className="border-[#DAA520] text-[#DAA520] hover:bg-[#DAA520]/10">
                       <Link to="/matches">Match History</Link>
@@ -158,7 +159,12 @@ const Index = () => {
           <>
             <section className="mb-12">
               <Card 
-                className="hover:shadow-lg transition-shadow cursor-pointer overflow-hidden border-2 border-[#DAA520]">
+                className="hover:shadow-lg transition-shadow cursor-pointer overflow-hidden border-2 border-[#DAA520]"
+                onClick={() => navigate('/matches?final=1')}
+                role="button"
+                tabIndex={0}
+                onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') navigate('/matches?final=1'); }}
+              >
                 <CardContent className="p-4">
                   <div className="text-sm mb-4 flex items-center gap-2">
                     <span className="bg-[#DAA520] text-white px-2 py-0.5 rounded-full text-xs font-semibold">FINAL</span>

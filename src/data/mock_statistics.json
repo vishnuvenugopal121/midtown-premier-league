@@ -55,7 +55,7 @@
                         "dots": 0
                     },
                     {
-                        "player": "Jomon (sub)",
+                        "player": "Ayyappa Das(Jomon Sub)",
                         "overs": 1,
                         "maidens": 0,
                         "runs": 4,
@@ -121,7 +121,7 @@
                         "sixes": 0,
                         "strikeRate": 12.50,
                         "out": true,
-                        "dismissalType": "retired hurt"
+                        "dismissalType": "Retired hurt"
                     },
                     {
                         "player": "Darsh",
@@ -240,7 +240,58 @@
                         "out": false
                     }
                 ],
-                "bowling": []
+                "bowling": [
+                    {
+                        "player": "Indrajith",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 8,
+                        "wickets": 1,
+                        "economy": 8.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Melbin",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 20,
+                        "wickets": 1,
+                        "economy": 20.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Ayyappa Das",
+                        "overs": 2,
+                        "maidens": 0,
+                        "runs": 27,
+                        "wickets": 0,
+                        "economy": 13.50,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Hari",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 11,
+                        "wickets": 1,
+                        "economy": 11.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Shyam",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 15,
+                        "wickets": 1,
+                        "economy": 15.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
             },
             "team2": {
                 "id": "GW",
