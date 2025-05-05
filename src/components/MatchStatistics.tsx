@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, Clock, MapPin } from 'lucide-react';
 import TeamLogo from './TeamLogo';
 import { formatDate, formatTime } from '@/lib/utils';
+import mockStats from '@/data/mock_statistics.json';
 
 interface BattingStats {
   player: string;
@@ -289,6 +290,73 @@ const MatchStatistics = () => {
 
     const teamA = getTeamById(match.team1);
     const teamB = getTeamById(match.team2);
+    
+    // Get match statistics from mock data
+    const matchStats = mockStats.matches[selectedMatch === 'final' ? 'final' : `match${match.match_id}`];
+    
+    const renderBattingStats = (teamStats: any) => (
+      <Table>
+        <TableHeader>
+          <TableRow className="bg-muted/50">
+            <TableHead>Batter</TableHead>
+            <TableHead className="text-right">R</TableHead>
+            <TableHead className="text-right">B</TableHead>
+            <TableHead className="text-right">4s</TableHead>
+            <TableHead className="text-right">6s</TableHead>
+            <TableHead className="text-right">SR</TableHead>
+            <TableHead>Dismissal</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {teamStats?.batting.map((batter: any, index: number) => (
+            <TableRow key={index}>
+              <TableCell className="font-medium">{batter.player}</TableCell>
+              <TableCell className="text-right">{batter.runs}</TableCell>
+              <TableCell className="text-right">{batter.balls}</TableCell>
+              <TableCell className="text-right">{batter.fours}</TableCell>
+              <TableCell className="text-right">{batter.sixes}</TableCell>
+              <TableCell className="text-right">{batter.strikeRate.toFixed(2)}</TableCell>
+              <TableCell>
+                {batter.out ? (
+                  `${batter.dismissalType} ${batter.dismissedBy ? `by ${batter.dismissedBy}` : ''}`
+                ) : (
+                  'not out'
+                )}
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    );
+
+    const renderBowlingStats = (teamStats: any) => (
+      <Table>
+        <TableHeader>
+          <TableRow className="bg-muted/50">
+            <TableHead>Bowler</TableHead>
+            <TableHead className="text-right">O</TableHead>
+            <TableHead className="text-right">M</TableHead>
+            <TableHead className="text-right">R</TableHead>
+            <TableHead className="text-right">W</TableHead>
+            <TableHead className="text-right">ECON</TableHead>
+            <TableHead className="text-right">Dots</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {teamStats?.bowling.map((bowler: any, index: number) => (
+            <TableRow key={index}>
+              <TableCell className="font-medium">{bowler.player}</TableCell>
+              <TableCell className="text-right">{bowler.overs}</TableCell>
+              <TableCell className="text-right">{bowler.maidens}</TableCell>
+              <TableCell className="text-right">{bowler.runs}</TableCell>
+              <TableCell className="text-right">{bowler.wickets}</TableCell>
+              <TableCell className="text-right">{bowler.economy.toFixed(2)}</TableCell>
+              <TableCell className="text-right">{bowler.dots}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    );
 
     return (
       <div className="space-y-6">
@@ -321,17 +389,21 @@ const MatchStatistics = () => {
         <Card>
           <CardHeader className="bg-muted/50">
             <div className="flex items-center gap-3">
-              <TeamLogo teamId={teamA?.id} size="sm" />
+              <TeamLogo teamId={matchStats?.team1.id} size="sm" />
               <CardTitle className="text-xl">
-                {teamA?.name} Innings
+                {getTeamById(matchStats?.team1.id)?.name} Innings
               </CardTitle>
             </div>
           </CardHeader>
-          <CardContent className="p-0">
-            <div className="space-y-6 p-6">
-              {/* Add batting and bowling tables here once we have the data structure */}
-              <div className="text-center text-muted-foreground">
-                Detailed match statistics will be available soon
+          <CardContent className="p-6">
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-semibold mb-4">Batting</h4>
+                {renderBattingStats(matchStats?.team1)}
+              </div>
+              <div>
+                <h4 className="font-semibold mb-4">Bowling</h4>
+                {renderBowlingStats(matchStats?.team2)}
               </div>
             </div>
           </CardContent>
@@ -341,17 +413,21 @@ const MatchStatistics = () => {
         <Card>
           <CardHeader className="bg-muted/50">
             <div className="flex items-center gap-3">
-              <TeamLogo teamId={teamB?.id} size="sm" />
+              <TeamLogo teamId={matchStats?.team2.id} size="sm" />
               <CardTitle className="text-xl">
-                {teamB?.name} Innings
+                {getTeamById(matchStats?.team2.id)?.name} Innings
               </CardTitle>
             </div>
           </CardHeader>
-          <CardContent className="p-0">
-            <div className="space-y-6 p-6">
-              {/* Add batting and bowling tables here once we have the data structure */}
-              <div className="text-center text-muted-foreground">
-                Detailed match statistics will be available soon
+          <CardContent className="p-6">
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-semibold mb-4">Batting</h4>
+                {renderBattingStats(matchStats?.team2)}
+              </div>
+              <div>
+                <h4 className="font-semibold mb-4">Bowling</h4>
+                {renderBowlingStats(matchStats?.team1)}
               </div>
             </div>
           </CardContent>
