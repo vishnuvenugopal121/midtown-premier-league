@@ -15,7 +15,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Points Table", path: "/points-table" },
-    { name: "Fixtures", path: "/fixtures" },
+    { name: "Result", path: "/matches" },
     { name: "Teams", path: "/teams" },
     { name: "Scorer's Desk", path: "/admin" },
   ];
