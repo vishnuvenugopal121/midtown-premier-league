@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,6 +9,7 @@ import PointsTablePage from "./pages/PointsTablePage";
 import FixturesPage from "./pages/FixturesPage";
 import TeamsPage from "./pages/TeamsPage";
 import AdminPanel from "./pages/AdminPanel";
+import MatchHistory from "./pages/MatchHistory";
 import NotFound from "./pages/NotFound";
 import { useState } from "react";
 
@@ -30,6 +30,7 @@ const App = () => {
               <Route path="/fixtures" element={<FixturesPage />} />
               <Route path="/teams" element={<TeamsPage />} />
               <Route path="/admin" element={<AdminPanel />} />
+              <Route path="/matches" element={<MatchHistory />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
