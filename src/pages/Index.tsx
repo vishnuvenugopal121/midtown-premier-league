@@ -62,7 +62,7 @@ const Index = () => {
       "Ayyappa Das",
       "Jomon",
       "Shyam",
-      "Arjun"
+      "Hari"
     ],
     primaryColor: "#DAA520"
   };
