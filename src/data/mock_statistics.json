@@ -1,0 +1,1583 @@
+{
+    "matches": {
+        "final": {
+            "team1": {
+                "id": "HU",
+                "batting": [
+                    {
+                        "player": "Indrajith",
+                        "runs": 36,
+                        "balls": 15,
+                        "fours": 1,
+                        "sixes": 5,
+                        "strikeRate": 240.00,
+                        "out": false
+                    },
+                    {
+                        "player": "Melbin",
+                        "runs": 56,
+                        "balls": 21,
+                        "fours": 1,
+                        "sixes": 8,
+                        "strikeRate": 266.67,
+                        "out": false
+                    }
+                ],
+                "bowling": [
+                    {
+                        "player": "Indrajith",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 3,
+                        "wickets": 0,
+                        "economy": 3.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Melbin",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 2,
+                        "wickets": 0,
+                        "economy": 2.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Ayyappa Das",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 6,
+                        "wickets": 1,
+                        "economy": 6.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Ayyappa Das(Jomon Sub)",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 4,
+                        "wickets": 0,
+                        "economy": 4.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Hari",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 11,
+                        "wickets": 0,
+                        "economy": 11.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Shyam",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 14,
+                        "wickets": 1,
+                        "economy": 14.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
+            },
+            "team2": {
+                "id": "TT",
+                "batting": [
+                    {
+                        "player": "Vinesh",
+                        "runs": 10,
+                        "balls": 10,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 100.00,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "dismissedBy": "Melbin",
+                        "bowler": "Shyam"
+                    },
+                    {
+                        "player": "Shifas",
+                        "runs": 2,
+                        "balls": 6,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 33.33,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "dismissedBy": "Neeraj",
+                        "bowler": "Ayyappa Das"
+                    },
+                    {
+                        "player": "Vishnu S",
+                        "runs": 1,
+                        "balls": 8,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 12.50,
+                        "out": true,
+                        "dismissalType": "Retired hurt"
+                    },
+                    {
+                        "player": "Darsh",
+                        "runs": 1,
+                        "balls": 2,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 50.00,
+                        "out": false
+                    },
+                    {
+                        "player": "Sibil",
+                        "runs": 9,
+                        "balls": 10,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 90.00,
+                        "out": false
+                    }
+                ],
+                "bowling": [
+                    {
+                        "player": "Vinesh",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 17,
+                        "wickets": 0,
+                        "economy": 17.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Shifas",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 4,
+                        "wickets": 0,
+                        "economy": 4.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Vishnu S",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 17,
+                        "wickets": 0,
+                        "economy": 17.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Akhil",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 19,
+                        "wickets": 0,
+                        "economy": 19.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Darsh",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 21,
+                        "wickets": 0,
+                        "economy": 21.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Sibil",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 24,
+                        "wickets": 0,
+                        "economy": 24.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
+            }
+        },
+        "match1": {
+            "team1": {
+                "id": "HU",
+                "batting": [
+                    {
+                        "player": "Indrajith",
+                        "runs": 55,
+                        "balls": 24,
+                        "fours": 1,
+                        "sixes": 8,
+                        "strikeRate": 229.17,
+                        "out": false
+                    },
+                    {
+                        "player": "Melbin",
+                        "runs": 8,
+                        "balls": 7,
+                        "fours": 0,
+                        "sixes": 1,
+                        "strikeRate": 114.29,
+                        "out": true,
+                        "dismissalType": "run out",
+                        "dismissedBy": "Shefi"
+                    },
+                    {
+                        "player": "Shyam",
+                        "runs": 1,
+                        "balls": 1,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 100.00,
+                        "out": false
+                    }
+                ],
+                "bowling": [
+                    {
+                        "player": "Indrajith",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 8,
+                        "wickets": 1,
+                        "economy": 8.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Melbin",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 20,
+                        "wickets": 1,
+                        "economy": 20.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Ayyappa Das",
+                        "overs": 2,
+                        "maidens": 0,
+                        "runs": 27,
+                        "wickets": 0,
+                        "economy": 13.50,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Hari",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 11,
+                        "wickets": 1,
+                        "economy": 11.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Shyam",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 15,
+                        "wickets": 1,
+                        "economy": 15.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
+            },
+            "team2": {
+                "id": "GW",
+                "batting": [
+                    {
+                        "player": "Neeraj",
+                        "runs": 30,
+                        "balls": 10,
+                        "fours": 0,
+                        "sixes": 4,
+                        "strikeRate": 300.00,
+                        "out": false
+                    },
+                    {
+                        "player": "Shefi",
+                        "runs": 18,
+                        "balls": 6,
+                        "fours": 1,
+                        "sixes": 2,
+                        "strikeRate": 300.00,
+                        "out": true,
+                        "dismissalType": "bowled",
+                        "dismissedBy": "Melbin"
+                    },
+                    {
+                        "player": "Rajeev",
+                        "runs": 2,
+                        "balls": 4,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 50.00,
+                        "out": true,
+                        "dismissalType": "bowled",
+                        "dismissedBy": "Indrajith"
+                    },
+                    {
+                        "player": "Manoj",
+                        "runs": 1,
+                        "balls": 2,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 50.00,
+                        "out": true,
+                        "dismissalType": "bowled",
+                        "dismissedBy": "Hari"
+                    },
+                    {
+                        "player": "Rohith",
+                        "runs": 25,
+                        "balls": 10,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 250.00,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "dismissedBy": "Shyam"
+                    },
+                    {
+                        "player": "Vishnu V",
+                        "runs": 1,
+                        "balls": 1,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 100.00,
+                        "out": false
+                    }
+                ],
+                "bowling": [
+                    {
+                        "player": "Neeraj",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 9,
+                        "wickets": 0,
+                        "economy": 9.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Shefi",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 19,
+                        "wickets": 0,
+                        "economy": 19.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Rajeev",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 18,
+                        "wickets": 0,
+                        "economy": 18.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Vishnu V",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 6,
+                        "wickets": 0,
+                        "economy": 6.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Manoj",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 9,
+                        "wickets": 0,
+                        "economy": 9.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Rohith",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 8,
+                        "wickets": 0,
+                        "economy": 8.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
+            }
+        },
+        "match2": {
+            "team1": {
+                "id": "TT",
+                "batting": [
+                    {
+                        "player": "Vinesh",
+                        "runs": 2,
+                        "balls": 4,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 50.00,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "dismissedBy": "Adithya",
+                        "bowler": "Linto"
+                    },
+                    {
+                        "player": "Shifas",
+                        "runs": 25,
+                        "balls": 15,
+                        "fours": 1,
+                        "sixes": 3,
+                        "strikeRate": 166.67,
+                        "out": false
+                    },
+                    {
+                        "player": "Vishnu S",
+                        "runs": 6,
+                        "balls": 2,
+                        "fours": 0,
+                        "sixes": 1,
+                        "strikeRate": 300.00,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "dismissedBy": "Shafi"
+                    },
+                    {
+                        "player": "Akhil",
+                        "runs": 3,
+                        "balls": 7,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 42.86,
+                        "out": true,
+                        "dismissalType": "run out"
+                    },
+                    {
+                        "player": "Darsh",
+                        "runs": 18,
+                        "balls": 8,
+                        "fours": 1,
+                        "sixes": 2,
+                        "strikeRate": 225.00,
+                        "out": false
+                    }
+                ],
+                "bowling": [
+                    {
+                        "player": "Vinesh",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 11,
+                        "wickets": 1,
+                        "economy": 11.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Shifas",
+                        "overs": 1,
+                        "maidens": 1,
+                        "runs": 0,
+                        "wickets": 1,
+                        "economy": 0.00,
+                        "extras": 0,
+                        "dots": 6
+                    },
+                    {
+                        "player": "Vishnu S",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 16,
+                        "wickets": 0,
+                        "economy": 16.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Akhil",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 10,
+                        "wickets": 1,
+                        "economy": 10.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Shyam",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 15,
+                        "wickets": 1,
+                        "economy": 15.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Sibil",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 10,
+                        "wickets": 0,
+                        "economy": 10.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
+            },
+            "team2": {
+                "id": "PH",
+                "batting": [
+                    {
+                        "player": "Shafi",
+                        "runs": 0,
+                        "balls": 2,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 0.00,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "dismissedBy": "Sibil",
+                        "bowler": "Akhil"
+                    },
+                    {
+                        "player": "Adithya",
+                        "runs": 10,
+                        "balls": 7,
+                        "fours": 0,
+                        "sixes": 1,
+                        "strikeRate": 142.86,
+                        "out": true,
+                        "dismissalType": "bowled",
+                        "dismissedBy": "Vinesh"
+                    },
+                    {
+                        "player": "Linto",
+                        "runs": 0,
+                        "balls": 3,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 0.00,
+                        "out": false
+                    },
+                    {
+                        "player": "Mahesh",
+                        "runs": 30,
+                        "balls": 21,
+                        "fours": 0,
+                        "sixes": 4,
+                        "strikeRate": 142.86,
+                        "out": false
+                    },
+                    {
+                        "player": "Neerad",
+                        "runs": 1,
+                        "balls": 4,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 25.00,
+                        "out": true,
+                        "dismissalType": "bowled",
+                        "dismissedBy": "Shifas"
+                    }
+                ],
+                "bowling": [
+                    {
+                        "player": "Shafi",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 9,
+                        "wickets": 1,
+                        "economy": 9.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Adithya",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 13,
+                        "wickets": 0,
+                        "economy": 13.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Linto",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 10,
+                        "wickets": 1,
+                        "economy": 10.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Mahesh",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 19,
+                        "wickets": 0,
+                        "economy": 19.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Neerad",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 3,
+                        "wickets": 0,
+                        "economy": 3.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Nishad",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 9,
+                        "wickets": 0,
+                        "economy": 9.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
+            }
+        },
+        "match3": {
+            "team1": {
+                "id": "HU",
+                "batting": [
+                    {
+                        "player": "Indrajith",
+                        "runs": 20,
+                        "balls": 10,
+                        "fours": 0,
+                        "sixes": 3,
+                        "strikeRate": 200.00,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "dismissedBy": "Nishad",
+                        "bowler": "Mahesh"
+                    },
+                    {
+                        "player": "Melbin",
+                        "runs": 17,
+                        "balls": 10,
+                        "fours": 0,
+                        "sixes": 2,
+                        "strikeRate": 170.00,
+                        "out": true,
+                        "dismissalType": "run out",
+                        "dismissedBy": "Shafi"
+                    },
+                    {
+                        "player": "Shyam",
+                        "runs": 3,
+                        "balls": 4,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 75.00,
+                        "out": false
+                    },
+                    {
+                        "player": "Hari",
+                        "runs": 0,
+                        "balls": 1,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 0.00,
+                        "out": true,
+                        "dismissalType": "unknown"
+                    },
+                    {
+                        "player": "Ayyappa Das",
+                        "runs": 6,
+                        "balls": 5,
+                        "fours": 0,
+                        "sixes": 1,
+                        "strikeRate": 120.00,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "dismissedBy": "Shafi",
+                        "bowler": "Nishad"
+                    },
+                    {
+                        "player": "Ayyappa Das(Jomon Sub)",
+                        "runs": 5,
+                        "balls": 4,
+                        "fours": 1,
+                        "sixes": 0,
+                        "strikeRate": 125.00,
+                        "out": false
+                    }
+                ],
+                "bowling": [
+                    {
+                        "player": "Indrajith",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 7,
+                        "wickets": 0,
+                        "economy": 7.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Melbin",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 1,
+                        "wickets": 1,
+                        "economy": 1.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Ayyappa Das",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 2,
+                        "wickets": 0,
+                        "economy": 2.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Hari",
+                        "overs": 2,
+                        "maidens": 0,
+                        "runs": 1,
+                        "wickets": 3,
+                        "economy": 0.50,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Shyam",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 4,
+                        "wickets": 1,
+                        "economy": 4.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
+            },
+            "team2": {
+                "id": "PH",
+                "batting": [
+                    {
+                        "player": "Shafi",
+                        "runs": 1,
+                        "balls": 8,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 12.50,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "dismissedBy": "Shyam",
+                        "bowler": "Shyam"
+                    },
+                    {
+                        "player": "Adithya",
+                        "runs": 5,
+                        "balls": 6,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 83.33,
+                        "out": true,
+                        "dismissalType": "unknown"
+                    },
+                    {
+                        "player": "Linto",
+                        "runs": 7,
+                        "balls": 12,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 58.33,
+                        "out": false
+                    },
+                    {
+                        "player": "Mahesh",
+                        "runs": 0,
+                        "balls": 1,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 0.00,
+                        "out": true,
+                        "dismissalType": "unknown"
+                    },
+                    {
+                        "player": "Neerad",
+                        "runs": 0,
+                        "balls": 2,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 0.00,
+                        "out": true,
+                        "dismissalType": "unknown"
+                    },
+                    {
+                        "player": "Nishad",
+                        "runs": 0,
+                        "balls": 5,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 0.00,
+                        "out": true,
+                        "dismissalType": "unknown"
+                    }
+                ],
+                "bowling": [
+                    {
+                        "player": "Shafi",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 9,
+                        "wickets": 0,
+                        "economy": 9.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Adithya",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 6,
+                        "wickets": 0,
+                        "economy": 6.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Linto",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 11,
+                        "wickets": 0,
+                        "economy": 11.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Mahesh",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 10,
+                        "wickets": 1,
+                        "economy": 10.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Neerad",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 14,
+                        "wickets": 0,
+                        "economy": 14.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Nishad",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 8,
+                        "wickets": 1,
+                        "economy": 8.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
+            }
+        },
+        "match4": {
+            "team1": {
+                "id": "TT",
+                "batting": [
+                    {
+                        "player": "Vinesh",
+                        "runs": 6,
+                        "balls": 2,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 300.00,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "bowler": "Rohith"
+                    },
+                    {
+                        "player": "Shifas",
+                        "runs": 37,
+                        "balls": 16,
+                        "fours": 0,
+                        "sixes": 6,
+                        "strikeRate": 231.25,
+                        "out": true,
+                        "dismissalType": "unknown"
+                    },
+                    {
+                        "player": "Vishnu S",
+                        "runs": 31,
+                        "balls": 19,
+                        "fours": 0,
+                        "sixes": 4,
+                        "strikeRate": 163.16,
+                        "out": false
+                    },
+                    {
+                        "player": "Akhil",
+                        "runs": 4,
+                        "balls": 4,
+                        "fours": 1,
+                        "sixes": 0,
+                        "strikeRate": 100.00,
+                        "out": false
+                    },
+                    {
+                        "player": "Darsh",
+                        "runs": 0,
+                        "balls": 3,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 0.00,
+                        "out": true,
+                        "dismissalType": "unknown"
+                    }
+                ],
+                "bowling": [
+                    {
+                        "player": "Vinesh",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 6,
+                        "wickets": 1,
+                        "economy": 6.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Shifas",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 1,
+                        "wickets": 2,
+                        "economy": 1.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Vishnu S",
+                        "overs": 0,
+                        "maidens": 0,
+                        "runs": 0,
+                        "wickets": 0,
+                        "economy": 0.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Akhil",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 4,
+                        "wickets": 1,
+                        "economy": 4.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Darsh",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 14,
+                        "wickets": 1,
+                        "economy": 14.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Sibil",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 13,
+                        "wickets": 1,
+                        "economy": 13.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
+            },
+            "team2": {
+                "id": "GW",
+                "batting": [
+                    {
+                        "player": "Neeraj",
+                        "runs": 10,
+                        "balls": 11,
+                        "fours": 0,
+                        "sixes": 1,
+                        "strikeRate": 90.91,
+                        "out": true,
+                        "dismissalType": "unknown"
+                    },
+                    {
+                        "player": "Shefi",
+                        "runs": 13,
+                        "balls": 4,
+                        "fours": 0,
+                        "sixes": 2,
+                        "strikeRate": 325.00,
+                        "out": true,
+                        "dismissalType": "bowled",
+                        "bowler": "Darsh"
+                    },
+                    {
+                        "player": "Rajeev",
+                        "runs": 2,
+                        "balls": 7,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 28.57,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "bowler": "Akhil"
+                    },
+                    {
+                        "player": "Manoj",
+                        "runs": 5,
+                        "balls": 11,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 45.45,
+                        "out": true,
+                        "dismissalType": "bowled",
+                        "bowler": "Hari"
+                    },
+                    {
+                        "player": "Rohith",
+                        "runs": 0,
+                        "balls": 2,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 0.00,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "bowler": "Vinesh"
+                    },
+                    {
+                        "player": "Vishnu V",
+                        "runs": 0,
+                        "balls": 1,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 0.00,
+                        "out": true,
+                        "dismissalType": "bowled",
+                        "bowler": "Shifas"
+                    }
+                ],
+                "bowling": [
+                    {
+                        "player": "Neeraj",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 25,
+                        "wickets": 0,
+                        "economy": 25.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Shefi",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 7,
+                        "wickets": 1,
+                        "economy": 7.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Manoj",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 21,
+                        "wickets": 0,
+                        "economy": 21.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Vishnu V",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 4,
+                        "wickets": 1,
+                        "economy": 4.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Rajeev",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 13,
+                        "wickets": 0,
+                        "economy": 13.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Rohith",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 18,
+                        "wickets": 1,
+                        "economy": 18.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
+            }
+        },
+        "match5": {
+            "team1": {
+                "id": "TT",
+                "batting": [
+                    {
+                        "player": "Vinesh",
+                        "runs": 27,
+                        "balls": 14,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 192.86,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "dismissedBy": "Indrajith",
+                        "bowler": "Shyam"
+                    },
+                    {
+                        "player": "Shifas",
+                        "runs": 1,
+                        "balls": 5,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 20.00,
+                        "out": true,
+                        "dismissalType": "unknown"
+                    },
+                    {
+                        "player": "Vishnu S",
+                        "runs": 1,
+                        "balls": 3,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 33.33,
+                        "out": true,
+                        "dismissalType": "stumped",
+                        "bowler": "Indrajith"
+                    },
+                    {
+                        "player": "Akhil",
+                        "runs": 10,
+                        "balls": 11,
+                        "fours": 0,
+                        "sixes": 1,
+                        "strikeRate": 90.91,
+                        "out": true,
+                        "dismissalType": "run out",
+                        "dismissedBy": "Melbin"
+                    },
+                    {
+                        "player": "Sibil",
+                        "runs": 1,
+                        "balls": 2,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 50.00,
+                        "out": false
+                    }
+                ],
+                "bowling": [
+                    {
+                        "player": "Vinesh",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 16,
+                        "wickets": 0,
+                        "economy": 16.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Shifas",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 1,
+                        "wickets": 1,
+                        "economy": 1.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Vishnu S",
+                        "overs": 0.3,
+                        "maidens": 0,
+                        "runs": 6,
+                        "wickets": 0,
+                        "economy": 12.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Akhil",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 8,
+                        "wickets": 0,
+                        "economy": 8.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Darsh",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 18,
+                        "wickets": 1,
+                        "economy": 18.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
+            },
+            "team2": {
+                "id": "HU",
+                "batting": [
+                    {
+                        "player": "Indrajith",
+                        "runs": 7,
+                        "balls": 7,
+                        "fours": 0,
+                        "sixes": 1,
+                        "strikeRate": 100.00,
+                        "out": true,
+                        "dismissalType": "bowled",
+                        "bowler": "Shifas"
+                    },
+                    {
+                        "player": "Melbin",
+                        "runs": 29,
+                        "balls": 11,
+                        "fours": 0,
+                        "sixes": 4,
+                        "strikeRate": 263.64,
+                        "out": true,
+                        "dismissalType": "unknown"
+                    },
+                    {
+                        "player": "Shyam",
+                        "runs": 0,
+                        "balls": 3,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 0.00,
+                        "out": true,
+                        "dismissalType": "run out",
+                        "dismissedBy": "Vinesh"
+                    },
+                    {
+                        "player": "Ayyappa Das",
+                        "runs": 6,
+                        "balls": 5,
+                        "fours": 0,
+                        "sixes": 1,
+                        "strikeRate": 120.00,
+                        "out": false
+                    }
+                ],
+                "bowling": [
+                    {
+                        "player": "Indrajith",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 9,
+                        "wickets": 1,
+                        "economy": 9.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Melbin",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 10,
+                        "wickets": 1,
+                        "economy": 10.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Ayyappa Das",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 9,
+                        "wickets": 0,
+                        "economy": 9.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Jomon (sub)",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 10,
+                        "wickets": 0,
+                        "economy": 10.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Hari",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 8,
+                        "wickets": 0,
+                        "economy": 8.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Shyam",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 4,
+                        "wickets": 1,
+                        "economy": 4.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
+            }
+        },
+        "match6": {
+            "team1": {
+                "id": "PH",
+                "batting": [
+                    {
+                        "player": "Shafi",
+                        "runs": 10,
+                        "balls": 8,
+                        "fours": 0,
+                        "sixes": 1,
+                        "strikeRate": 125.00,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "dismissedBy": "keeper",
+                        "bowler": "Neeraj"
+                    },
+                    {
+                        "player": "Adithya",
+                        "runs": 27,
+                        "balls": 13,
+                        "fours": 0,
+                        "sixes": 4,
+                        "strikeRate": 207.69,
+                        "out": false
+                    },
+                    {
+                        "player": "Mahesh",
+                        "runs": 33,
+                        "balls": 15,
+                        "fours": 1,
+                        "sixes": 4,
+                        "strikeRate": 220.00,
+                        "out": true,
+                        "dismissalType": "unknown"
+                    }
+                ],
+                "bowling": [
+                    {
+                        "player": "Shafi",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 11,
+                        "wickets": 0,
+                        "economy": 11.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Adithya",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 10,
+                        "wickets": 0,
+                        "economy": 10.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Linto",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 25,
+                        "wickets": 0,
+                        "economy": 25.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Mahesh",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 15,
+                        "wickets": 1,
+                        "economy": 15.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Neerad",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 21,
+                        "wickets": 1,
+                        "economy": 21.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
+            },
+            "team2": {
+                "id": "GW",
+                "batting": [
+                    {
+                        "player": "Neeraj",
+                        "runs": 6,
+                        "balls": 3,
+                        "fours": 0,
+                        "sixes": 1,
+                        "strikeRate": 200.00,
+                        "out": true,
+                        "dismissalType": "run out"
+                    },
+                    {
+                        "player": "Shefi",
+                        "runs": 47,
+                        "balls": 16,
+                        "fours": 1,
+                        "sixes": 6,
+                        "strikeRate": 293.75,
+                        "out": true,
+                        "dismissalType": "caught",
+                        "dismissedBy": "keeper",
+                        "bowler": "Neerad"
+                    },
+                    {
+                        "player": "Rajeev",
+                        "runs": 1,
+                        "balls": 1,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 100.00,
+                        "out": false
+                    },
+                    {
+                        "player": "Rohith",
+                        "runs": 8,
+                        "balls": 5,
+                        "fours": 0,
+                        "sixes": 0,
+                        "strikeRate": 160.00,
+                        "out": false
+                    }
+                ],
+                "bowling": [
+                    {
+                        "player": "Neeraj",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 7,
+                        "wickets": 1,
+                        "economy": 7.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Shefi",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 13,
+                        "wickets": 0,
+                        "economy": 13.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Manoj",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 18,
+                        "wickets": 0,
+                        "economy": 18.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Vishnu V",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 14,
+                        "wickets": 0,
+                        "economy": 14.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Rajeev",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 9,
+                        "wickets": 0,
+                        "economy": 9.00,
+                        "extras": 0,
+                        "dots": 0
+                    },
+                    {
+                        "player": "Rohith",
+                        "overs": 1,
+                        "maidens": 0,
+                        "runs": 16,
+                        "wickets": 0,
+                        "economy": 16.00,
+                        "extras": 0,
+                        "dots": 0
+                    }
+                ]
+            }
+        }
+    }
+}

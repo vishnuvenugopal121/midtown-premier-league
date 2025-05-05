@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, Clock, MapPin } from 'lucide-react';
 import TeamLogo from './TeamLogo';
 import { formatDate, formatTime } from '@/lib/utils';
+import mockStats from '@/data/mock_statistics.json';
+import { useLocation } from 'react-router-dom';
 
 interface BattingStats {
   player: string;
@@ -33,6 +35,15 @@ interface BowlingStats {
 const MatchStatistics = () => {
   const { tournament, getTeamById } = useTournament();
   const [selectedMatch, setSelectedMatch] = useState<string | null>(null);
+  const location = useLocation();
+
+  // On mount, check for ?final=1 in the URL
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if (params.get('final') === '1') {
+      setSelectedMatch('final');
+    }
+  }, [location.search]);
 
   // Filter completed matches
   const completedMatches = tournament.matches.filter(match => match.status === 'completed');
@@ -162,17 +173,22 @@ const MatchStatistics = () => {
               </div>
 
               <div className="grid gap-4">
-                {matchesOnDate.map((match) => {
+                {matchesOnDate.map((match, idx) => {
                   const teamA = getTeamById(match.team1);
                   const teamB = getTeamById(match.team2);
+                  // Calculate match number (1-based index across all completed matches)
+                  const matchIndex = completedMatches.findIndex(m => m.match_id === match.match_id) + 1;
 
                   return (
                     <Card key={match.match_id} 
                           className="hover:shadow-lg transition-shadow cursor-pointer overflow-hidden"
                           onClick={() => setSelectedMatch(match.match_id)}>
                       <CardContent className="p-4">
-                        <div className="text-sm text-muted-foreground mb-4">
-                          MPL · {formatDate(new Date(match.date))}
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="bg-primary text-white px-2 py-0.5 rounded-full text-xs font-semibold">Match {matchIndex}</span>
+                          <span className="text-sm text-muted-foreground">
+                            MPL · {formatDate(new Date(match.date))}
+                          </span>
                         </div>
                         <div className="md:flex md:items-center md:justify-between md:gap-4">
                           {/* Mobile View */}
@@ -283,12 +299,273 @@ const MatchStatistics = () => {
 
   const renderMatchDetails = () => {
     if (!selectedMatch) return null;
-    
+
+    // Special handling for the static final match
+    if (selectedMatch === 'final') {
+      const matchStats = mockStats.matches.final;
+      const teamA = getTeamById('HU');
+      const teamB = getTeamById('TT');
+      const venue = 'Club-T Turf, Kochi';
+      const date = '2025-05-04T21:20:00';
+
+      // Calculate total runs and wickets for each team
+      const getTotal = (batting: any[]) => {
+        const runs = batting.reduce((sum, b) => sum + b.runs, 0);
+        const wickets = batting.filter(b => b.out).length;
+        return { runs, wickets };
+      };
+      const teamATotal = getTotal(matchStats.team1.batting);
+      const teamBTotal = getTotal(matchStats.team2.batting);
+      // Winner summary (static for final)
+      const winnerSummary = 'HU won by 61 runs';
+
+      // Team scores for final (static)
+      const teamAScore = '102/0';
+      const teamBScore = '41/2';
+
+      const renderBattingStats = (teamStats: any) => (
+        <Table>
+          <TableHeader>
+            <TableRow className="bg-muted/50">
+              <TableHead>Batter</TableHead>
+              <TableHead className="text-right">R</TableHead>
+              <TableHead className="text-right">B</TableHead>
+              <TableHead className="text-right">4s</TableHead>
+              <TableHead className="text-right">6s</TableHead>
+              <TableHead className="text-right">SR</TableHead>
+              <TableHead>Dismissal</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {teamStats?.batting.map((batter: any, index: number) => (
+              <TableRow key={index}>
+                <TableCell className="font-medium">{batter.player}</TableCell>
+                <TableCell className="text-right">{batter.runs}</TableCell>
+                <TableCell className="text-right">{batter.balls}</TableCell>
+                <TableCell className="text-right">{batter.fours}</TableCell>
+                <TableCell className="text-right">{batter.sixes}</TableCell>
+                <TableCell className="text-right">{batter.strikeRate.toFixed(2)}</TableCell>
+                <TableCell>
+                  {batter.out ? (
+                    `${batter.dismissalType || ''} ${batter.dismissedBy ? `by ${batter.dismissedBy}` : ''}`.trim() || 'out'
+                  ) : (
+                    'not out'
+                  )}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      );
+
+      const renderBowlingStats = (teamStats: any) => (
+        <Table>
+          <TableHeader>
+            <TableRow className="bg-muted/50">
+              <TableHead>Bowler</TableHead>
+              <TableHead className="text-right">O</TableHead>
+              <TableHead className="text-right">M</TableHead>
+              <TableHead className="text-right">R</TableHead>
+              <TableHead className="text-right">W</TableHead>
+              <TableHead className="text-right">ECON</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {teamStats?.bowling.map((bowler: any, index: number) => (
+              <TableRow key={index}>
+                <TableCell className="font-medium">{bowler.player}</TableCell>
+                <TableCell className="text-right">{bowler.overs}</TableCell>
+                <TableCell className="text-right">{bowler.maidens}</TableCell>
+                <TableCell className="text-right">{bowler.runs}</TableCell>
+                <TableCell className="text-right">{bowler.wickets}</TableCell>
+                <TableCell className="text-right">{bowler.economy.toFixed(2)}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      );
+
+      return (
+        <div className="space-y-6">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-4 mb-6">
+            <Button variant="ghost" size="icon" onClick={() => setSelectedMatch(null)}>
+              <ArrowLeft className="h-4 w-4" />
+            </Button>
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+              <div className="flex items-center gap-4">
+                <TeamLogo teamId={teamA?.id} size="lg" />
+                <span className="text-xl font-bold">vs</span>
+                <TeamLogo teamId={teamB?.id} size="lg" />
+              </div>
+              <div>
+                <h2 className="text-xl md:text-2xl font-bold">
+                  {teamA?.id} vs {teamB?.id}
+                </h2>
+                <div className="flex items-center gap-2 text-xs md:text-sm text-muted-foreground">
+                  <MapPin size={14} />
+                  {venue}
+                  <span>·</span>
+                  <Clock size={14} />
+                  {formatTime(date)}
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Team scores and winner summary */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-2">
+            <div className="flex items-center gap-2">
+              <TeamLogo teamId={teamA?.id} size="sm" />
+              <span className="font-bold">{teamA?.id}</span>
+              <span className="font-mono text-lg font-bold">{teamAScore}</span>
+            </div>
+            <span className="font-bold text-muted-foreground">vs</span>
+            <div className="flex items-center gap-2">
+              <TeamLogo teamId={teamB?.id} size="sm" />
+              <span className="font-bold">{teamB?.id}</span>
+              <span className="font-mono text-lg font-bold">{teamBScore}</span>
+            </div>
+          </div>
+          <div className="text-center text-primary font-semibold mb-4">{winnerSummary}</div>
+          {/* First Innings */}
+          <Card>
+            <CardHeader className="bg-muted/50">
+              <div className="flex items-center gap-3">
+                <TeamLogo teamId={teamA?.id} size="sm" />
+                <CardTitle className="text-xl">
+                  {teamA?.name} Innings
+                </CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent className="p-6">
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-semibold mb-4">Batting</h4>
+                  {renderBattingStats(matchStats?.team1)}
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-4">Bowling</h4>
+                  {renderBowlingStats(matchStats?.team2)}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Second Innings */}
+          <Card>
+            <CardHeader className="bg-muted/50">
+              <div className="flex items-center gap-3">
+                <TeamLogo teamId={teamB?.id} size="sm" />
+                <CardTitle className="text-xl">
+                  {teamB?.name} Innings
+                </CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent className="p-6">
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-semibold mb-4">Batting</h4>
+                  {renderBattingStats(matchStats?.team2)}
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-4">Bowling</h4>
+                  {renderBowlingStats(matchStats?.team1)}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      );
+    }
+
+    // Only for non-final matches
     const match = tournament.matches.find(m => m.match_id === selectedMatch);
     if (!match) return null;
 
     const teamA = getTeamById(match.team1);
     const teamB = getTeamById(match.team2);
+    const matchStats = mockStats.matches[`match${match.match_id}`];
+
+    // Get correct scores from match.result
+    let teamAScore = '';
+    let teamBScore = '';
+    if (match.result) {
+      if (match.result.winner === match.team1) {
+        teamAScore = match.result.winningTeamScore;
+        teamBScore = match.result.losingTeamScore;
+      } else {
+        teamAScore = match.result.losingTeamScore;
+        teamBScore = match.result.winningTeamScore;
+      }
+    }
+
+    // Winner summary (from match.result if available)
+    let winnerSummary = '';
+    if (match.result) {
+      const winnerTeam = getTeamById(match.result.winner)?.id;
+      winnerSummary = `${winnerTeam} won by ${match.result.winMargin}`;
+    }
+
+    const renderBattingStats = (teamStats: any) => (
+      <Table>
+        <TableHeader>
+          <TableRow className="bg-muted/50">
+            <TableHead>Batter</TableHead>
+            <TableHead className="text-right">R</TableHead>
+            <TableHead className="text-right">B</TableHead>
+            <TableHead className="text-right">4s</TableHead>
+            <TableHead className="text-right">6s</TableHead>
+            <TableHead className="text-right">SR</TableHead>
+            <TableHead>Dismissal</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {teamStats?.batting.map((batter: any, index: number) => (
+            <TableRow key={index}>
+              <TableCell className="font-medium">{batter.player}</TableCell>
+              <TableCell className="text-right">{batter.runs}</TableCell>
+              <TableCell className="text-right">{batter.balls}</TableCell>
+              <TableCell className="text-right">{batter.fours}</TableCell>
+              <TableCell className="text-right">{batter.sixes}</TableCell>
+              <TableCell className="text-right">{batter.strikeRate.toFixed(2)}</TableCell>
+              <TableCell>
+                {batter.out ? (
+                  `${batter.dismissalType} ${batter.dismissedBy ? `by ${batter.dismissedBy}` : ''}`
+                ) : (
+                  'not out'
+                )}
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    );
+
+    const renderBowlingStats = (teamStats: any) => (
+      <Table>
+        <TableHeader>
+          <TableRow className="bg-muted/50">
+            <TableHead>Bowler</TableHead>
+            <TableHead className="text-right">O</TableHead>
+            <TableHead className="text-right">M</TableHead>
+            <TableHead className="text-right">R</TableHead>
+            <TableHead className="text-right">W</TableHead>
+            <TableHead className="text-right">ECON</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {teamStats?.bowling.map((bowler: any, index: number) => (
+            <TableRow key={index}>
+              <TableCell className="font-medium">{bowler.player}</TableCell>
+              <TableCell className="text-right">{bowler.overs}</TableCell>
+              <TableCell className="text-right">{bowler.maidens}</TableCell>
+              <TableCell className="text-right">{bowler.runs}</TableCell>
+              <TableCell className="text-right">{bowler.wickets}</TableCell>
+              <TableCell className="text-right">{bowler.economy.toFixed(2)}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    );
 
     return (
       <div className="space-y-6">
@@ -316,7 +593,23 @@ const MatchStatistics = () => {
             </div>
           </div>
         </div>
-
+        {/* Team scores and winner summary */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-2">
+          <div className="flex items-center gap-2">
+            <TeamLogo teamId={teamA?.id} size="sm" />
+            <span className="font-bold">{teamA?.id}</span>
+            <span className="font-mono text-lg font-bold">{teamAScore}</span>
+          </div>
+          <span className="font-bold text-muted-foreground">vs</span>
+          <div className="flex items-center gap-2">
+            <TeamLogo teamId={teamB?.id} size="sm" />
+            <span className="font-bold">{teamB?.id}</span>
+            <span className="font-mono text-lg font-bold">{teamBScore}</span>
+          </div>
+        </div>
+        {winnerSummary && (
+          <div className="text-center text-primary font-semibold mb-4">{winnerSummary}</div>
+        )}
         {/* First Innings */}
         <Card>
           <CardHeader className="bg-muted/50">
@@ -327,11 +620,15 @@ const MatchStatistics = () => {
               </CardTitle>
             </div>
           </CardHeader>
-          <CardContent className="p-0">
-            <div className="space-y-6 p-6">
-              {/* Add batting and bowling tables here once we have the data structure */}
-              <div className="text-center text-muted-foreground">
-                Detailed match statistics will be available soon
+          <CardContent className="p-6">
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-semibold mb-4">Batting</h4>
+                {renderBattingStats(matchStats?.team1)}
+              </div>
+              <div>
+                <h4 className="font-semibold mb-4">Bowling</h4>
+                {renderBowlingStats(matchStats?.team2)}
               </div>
             </div>
           </CardContent>
@@ -347,11 +644,15 @@ const MatchStatistics = () => {
               </CardTitle>
             </div>
           </CardHeader>
-          <CardContent className="p-0">
-            <div className="space-y-6 p-6">
-              {/* Add batting and bowling tables here once we have the data structure */}
-              <div className="text-center text-muted-foreground">
-                Detailed match statistics will be available soon
+          <CardContent className="p-6">
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-semibold mb-4">Batting</h4>
+                {renderBattingStats(matchStats?.team2)}
+              </div>
+              <div>
+                <h4 className="font-semibold mb-4">Bowling</h4>
+                {renderBowlingStats(matchStats?.team1)}
               </div>
             </div>
           </CardContent>
